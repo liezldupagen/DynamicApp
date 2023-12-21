@@ -1,0 +1,455 @@
+/* Turquoise Color Palette */
+:root {
+	--primary-bg: #dfe7eb;
+	/* Main background color */
+	--secondary-bg: #a2d5f2;
+	/* Secondary background color */
+	--tab-bg: #6fb1bf;
+	/* Tabs background color */
+	--tab-active-bg: #90e0ef;
+	/* Active tab background color */
+	--text-color: #444444;
+	/* Text color */
+	--accent-color: #258ea6;
+	/* Accent color */
+	--button-color: #007bff;
+	/* Button color */
+	--button-hover-color: #0056b3;
+	/* Button hover color */
+}
+
+/* Container styles */
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: var(--secondary-bg);
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Header styles */
+header {
+	text-align: center;
+	margin-bottom: 20px;
+	background-color: #26a3a8;
+	/* Blue-green color */
+}
+
+header h1 {
+	margin: 40px;
+	font-size: 24px;
+	color: #fff;
+	/* White color for the text to ensure it's readable on the blue-green background */
+}
+
+header img {
+
+	height: 100px;
+	width: 100px;
+}
+
+.header-content {
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	height: 100px;
+	width: 100px;
+	margin-right: 85px;
+	margin-left: 5px;
+}
+
+hr.customLine {
+	border-top: 1px solid #8c8b8b;
+	width: 100%;
+	text-align: center;
+}
+
+p {
+	font-size: 14px;
+}
+
+/* Submenu styles */
+.submenu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px;
+	background-color: #d3d3d3;
+	/* Light gray color */
+	margin-bottom: 20px;
+	/* Space below the submenu */
+}
+  
+/*Custom Radio Buttons*/
+.radio-group {
+	display: flex;
+	gap: 30px;
+ 	margin-top: 20;
+	margin-right: 70px;
+}
+
+.radio-group label {
+	position: relative;
+	padding-left: 25px;
+	cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+	position: absolute;
+	visibility: hidden;
+}
+
+.radio-group .radio {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 16px;
+	width: 16px;
+	background-color: #1abc9c;
+	border: 2px solid white;
+	/* Add this line */
+	border-radius: 50%;
+}
+
+
+.radio-group .radio::after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+.radio-group input[type="radio"]:checked~.radio::after {
+	display: block;
+}
+
+.radio-group .radio::after {
+	top: 5px;
+	left: 5px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: white;
+}
+
+/* Search Existing Record Label and Input*/
+.flex-container {
+	display: flex;
+	align-items: center;
+	gap: 10px;  /* Adjust this value to change the gap */
+  }
+  
+  .flex-container p {
+	margin: 0;
+	text-align: right;
+  }
+  
+  
+
+/* Reset default margins and paddings */
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+/* Body styles */
+body {
+	font-family: Arial, sans-serif;
+	background-color: var(--primary-bg);
+	color: var(--text-color);
+}
+
+fieldset {
+  width: 90%; /* Adjust this value as needed */
+}
+
+
+
+/**
+* Make the field a flex-container, reverse the order so label is on top.
+*/
+.field {
+	display: flex;
+	flex-flow: column-reverse;
+	margin-bottom: .5em;
+	width: 98%;
+	font-size: 15px;
+
+}
+
+label,
+input {
+	transition: all 0.2s;
+	touch-action: manipulation;
+}
+
+input {
+	font-size: 1.0em;
+	border: 1px solid #ccc;
+	font-family: inherit;
+	border-radius: 3px;
+	padding: .8em;
+	cursor: text;
+	color: #444444;
+}
+
+input:focus {
+	outline: 0;
+	border-bottom: 1px solid #26a3a8;
+	;
+}
+
+label {
+	color: #444444;
+	letter-spacing: 0.05em;
+	font-size: .8em;
+
+}
+
+input:placeholder-shown+label {
+	cursor: text;
+	max-width: 66.66%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	transform-origin: left bottom;
+	transform-origin: .25em -1em;
+	transform: translate(0, 2.125rem) scale(1.25);
+	padding: 0 .5em 0;
+}
+
+::-webkit-input-placeholder {
+	opacity: 0;
+	transition: inherit;
+}
+
+input:focus::-webkit-input-placeholder {
+	opacity: 1;
+}
+
+input:not(:placeholder-shown)+label,
+input:focus+label {
+	transform: translate(0, 0) scale(1);
+	cursor: pointer;
+}
+
+
+@media screen and (min-width: 457px) {
+	.field.half {
+		width: 48%;
+		float: left;
+		margin-right: 2%;
+	}
+
+	.field.third {
+		width: 29%;
+		float: left;
+		margin-right: 1vw;
+	}
+
+}
+
+/* Button styles */
+button {
+	padding: 8px 12px;
+	font-size: 16px;
+	border: none;
+	border-radius: 3px;
+	background-color: var(--button-color);
+	color: #fff;
+	/* White color for the text to ensure it's readable on the button color */
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: var(--button-hover-color);
+}
+
+/* +++++ Custom Checkbox ++++++++++  */
+.custom-checkbox {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 25px;
+	width: 25px;
+	z-index: 1;
+}
+
+.custom-checkbox-span {
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background-color: #1abc9c;
+	width: 15px;
+	/* Adjust this value as needed */
+	height: 15px;
+	/* Adjust this value as needed */
+	cursor: pointer;
+	position: relative;
+}
+
+
+.custom-checkbox-span:after {
+	content: "\f00c";
+	/* unicode for check icon */
+	font-family: "Font Awesome 5 Free";
+	font-size: 0.7rem;
+	/* Adjust this value as needed */
+	font-weight: 900;
+	/* Use 900 for solid icons */
+	position: absolute;
+	left: 50%;
+	/* Adjust this value as needed */
+	top: 50%;
+	/* Adjust this value as needed */
+	transform: translate(-50%, -50%);
+	color: #fff;
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
+}
+
+
+.custom-checkbox:checked+.custom-checkbox-span:after {
+	opacity: 1;
+}
+
+/* +++++ end custm checkbox ++++++++++  */
+
+/* Tab container styles */
+.tab-container {
+	display: flex;
+}
+
+.tabs {
+	flex: 0 0 25%;
+	border-right: 1px solid #ccc;
+	background-color: var(--tab-bg);
+}
+
+.tablinks {
+	width: 100%;
+	/* Make the tab links take up the full width of its container */
+	padding: 10px;
+	/* Same padding as the input fields */
+	text-align: left;
+	border: none;
+	outline: none;
+	background-color: var(--tab-bg);
+	color: var(--text-color);
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	box-sizing: border-box;
+	/* Include padding and border in element's total width and height */
+}
+
+
+.tablinks:hover {
+	background-color: var(--tab-active-bg);
+}
+
+.tablinks.active {
+	background-color: var(--tab-active-bg);
+	font-weight: bold;
+}
+
+/* Tab content styles */
+.tab-content {
+	flex: 1;
+	padding-left: 20px;
+}
+
+.tabcontent {
+	display: none;
+}
+
+.tabcontent.active {
+	display: block;
+	padding: 20px;
+}
+
+/*Table styles*/
+
+table {
+    width: 105%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+  }
+
+  th, td {
+    border: 1px solid  #8c8b8b;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #8c8b8b;
+  }
+  
+  td {
+	vertical-align: top;
+  }
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: left;
+        margin-bottom: 10px;
+    }
+    .column {
+        flex: 15%;
+    }
+	
+	table td label {
+		text-align: right;
+	}
+	table td input[type="text"] {
+		width: 80%; /* Adjust this value to change the width */
+		height: 15px; /* Adjust this value to change the height */
+	}
+
+	table th,td {
+		font-size: 14px; /* Adjust this value to change the font size */
+	}
+ 
+
+	.table2 td input[type="text"] {
+		width: auto;  /* Adjust this value to change the width */
+		height: 1px; /* Adjust this value to change the height */
+	  }
+	  
+	  td img {
+		display: block;
+		width: auto;
+		height: auto;
+	  }
+
+/*Footer styles*/
+
+footer {
+	background-color: #26a3a8;
+	color: #fff;
+	padding: .4em 1em;
+	text-align: center;
+}
+
+footer p {
+	font-weight: 300;
+	font-size: .8em;
+}
+
+footer p strong {
+	font-family: 'Dosis', sans-serif;
+	font-size: 1.25em
+}
+
+footer p.copy {
+	font-size: .7em;
+	margin: 1em 0;
+}
